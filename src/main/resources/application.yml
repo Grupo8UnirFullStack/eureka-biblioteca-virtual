@@ -1,11 +1,17 @@
+##Puerto
 server:
   port: 8761
 
 eureka:
+  #lado cliente
   client:
+    #no se registra asi mismo en euraka
     register-with-eureka: false
+    ## no realiza fetch
     fetch-registry: false
   instance:
+    ## nombre de dominio
     hostname: ${EUREKA_HOST:localhost}
     server:
+      ## porcentaje de tolerancia para renovaciones
       renewal-percent-threshold: 0.90
